@@ -1,0 +1,41 @@
+roslaunch turtlebot_navigation_gazebo gmapping_demo.launch 
+rosrun rviz rviz
+rostopic list 
+roslaunch turtlebot_ teleop keyboard_teleop.launch
+roslaunch turtlebot_navigation_gazebo gmapping_demo.launch^C
+roscd 
+cd . ./src/ 
+rosrun map_server map_saver -f my_map
+rosrun map_server map_saver -f my_map.yaml^C
+cd . ./src/ 
+rosrun map_server map_saver -f my_map.yaml
+rostopic echo /map_metadata
+^C
+rostopic echo /map
+rostopic echo /map_metadata^C
+rostopic echo /map
+rosservice call /static_map”{}”
+^C
+rosservice call /static_map”{}”
+^C
+^C
+roscd
+cd . ./src/
+rosrun tf view_frames
+roscd turtlebot_navigation_gazebo/lunch/
+ls
+vi gammping_demo.lunch
+catkin_create_pkg my_mapping_launcher
+clera 
+turtlebot_navigation_gazebo/
+cd launch/ 
+vi gammping_demo.launch
+roscd turtlebot_navigation
+ls
+cd launch/
+ls 
+cd includes/
+ls
+cd gammping/
+ls
+cp gammping.launch.xml /home/user/catkin_ws/src/
